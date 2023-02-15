@@ -24,8 +24,15 @@ export class CinemaService {
   
    getMovies()
    {
-    let url = 'https://api.themoviedb.org/3/discover/movie?api_key=434577a472bbcc4c3d3154c77dd71ace&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=18&with_watch_monetization_types=flatrate';
+    let url = 
+    'https://api.themoviedb.org/3/movie/299536/credits?api_key=434577a472bbcc4c3d3154c77dd71ace&language=en-US';
     return this.http.get(url);
    }
+
+  getQuery(query: string)
+  {
+    let url = "https://api.themoviedb.org/3/search/movie?api_key=434577a472bbcc4c3d3154c77dd71ace&language=en-US&query=" + query + "&page=1&include_adult=false&sort_by=release_date.desc";
+    return this.http.get(url);
+  }
 
 }

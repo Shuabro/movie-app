@@ -1,6 +1,5 @@
 <div class="container">
   <h1>Movie App</h1>
-  <form action="">
   <mat-form-field >
     <mat-label>Select</mat-label>
     <mat-select >
@@ -8,7 +7,17 @@
     </mat-select>
   </mat-form-field>
   <button type="button" mat-raised-button (click)="onClick()">Select</button>
- </form>
+  <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Movie Search</mat-label>
+      <input type="search" name="moviesearch" matInput placeholder="Enter movie" value="" (keyup.enter)="searchMovies($event)">
+    </mat-form-field>
+
+    <p class="task reminder" *ngFor="let data of sdDe; let i = index">{{sdDe[i]}}</p>
+  
+    
+
 
     
    
