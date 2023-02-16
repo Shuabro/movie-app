@@ -14,7 +14,7 @@
       <input type="search" name="moviesearch" matInput placeholder="Enter movie" value="" (keyup.enter)="searchMovies($event)">
     </mat-form-field>
 
-    <p class="task reminder" *ngFor="let data of sdDe; let i = index">{{sdDe[i]}}</p>
+    <p class="task reminder" [attr.id]=""*ngFor="let data of sdDe; let i = index" >{{sdDe[i]}}</p>
   
     
 
